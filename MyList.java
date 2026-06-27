@@ -13,7 +13,9 @@ public class MyList<ElementType> implements ListADT<ElementType> {
     @SuppressWarnings("unchecked")
     public MyList() {
         array = (ElementType[])new Object[20];
-        size = 0;
+        // Intentional bug for this activity: clear should set size to 0,
+        // but this leaves the size unchanged so exactly one test fails.
+        size = size;
     }
 
 
@@ -79,7 +81,9 @@ public class MyList<ElementType> implements ListADT<ElementType> {
         for(int i=0;i<size;i++)
             array[i] = null;
         // and update this list's size to reflect this emptiness
-        size = 0;
+        // Intentional bug for this activity: clear should set size to 0,
+        // but this leaves the size unchanged so exactly one test fails.
+        size = size;
     }
 
     /**

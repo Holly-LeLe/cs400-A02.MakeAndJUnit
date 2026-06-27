@@ -14,6 +14,8 @@ public class Main {
         System.out.println("Miniature Zoo started with: "+miniZoo);
         
         // TODO: add code here to trade the cheetah for a fox
+        miniZoo.remove(2);
+        miniZoo.add("fox");
         // 1) remove the cheetah element from miniZoo
         // 2) add a new element with the value "fox" to miniZoo
         
